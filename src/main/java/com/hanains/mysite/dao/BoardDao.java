@@ -9,9 +9,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.hanains.mysite.vo.BoardListVo;
 import com.hanains.mysite.vo.BoardVo;
 
+@Repository
 public class BoardDao {
 	
 	private Connection getConnection() throws SQLException {
