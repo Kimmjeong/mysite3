@@ -24,7 +24,7 @@
 
 	<select id="view" resultType="BoardVo" parameterType="long">
 		<![CDATA[
-		select title, content, member_no from board where no=#{no}
+		select no, title, content, member_no as memberNo from board where no=#{no}
 		]]>
 	</select>
 	
