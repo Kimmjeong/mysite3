@@ -40,7 +40,7 @@ public class BoardController {
 	public String write(HttpSession session, @ModelAttribute BoardVo vo){
 		UserVo authUser=(UserVo) session.getAttribute("authUser");
 		if(authUser!=null){
-			vo.setMember_no(authUser.getNo());
+			vo.setMemberNo(authUser.getNo());
 			boardService.insert(vo);
 		}
 		return "redirect:/board/";
@@ -59,7 +59,7 @@ public class BoardController {
 		BoardVo writing=boardService.view(no);
 		UserVo authUser=(UserVo) session.getAttribute("authUser");
 		
-		if(authUser==null || authUser.getNo()!=writing.getMember_no()){
+		if(authUser==null || authUser.getNo()!=writing.getMemberNo()){
 			return "redirect:/board/view/"+no;
 		}
 		
@@ -74,12 +74,12 @@ public class BoardController {
 		return "redirect:/board/view/"+no;
 	}
 	
-	@RequestMapping("/delete/{no}&{member_no}") // 삭제
-	public String delete(HttpSession session, @PathVariable("no") Long no, @PathVariable("member_no") Long member_no){
+	@RequestMapping("/delete/{no}&{memberNo}") // 삭제
+	public String delete(HttpSession session, @PathVariable("no") Long no, @PathVariable("memberNo") Long memberNo){
 		UserVo authUser=(UserVo) session.getAttribute("authUser");
 		if (authUser != null) {
-			if (authUser.getNo().equals(member_no))
-				boardService.delete(no, member_no);
+			if (authUser.getNo().equals(memberNo))
+				boardService.delete(no, memberNo);
 
 		}
 		return "redirect:/board/";

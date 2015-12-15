@@ -31,10 +31,10 @@
 				
 				<c:choose>
 					<c:when test="${empty authUser }">
-						<c:set var="loginMember_no" value="-1"/>
+						<c:set var="loginMemberNo" value="-1"/>
 					</c:when>
 					<c:otherwise>
-						<c:set var="loginMember_no" value="${authUser.no }"/>
+						<c:set var="loginMemberNo" value="${authUser.no }"/>
 					</c:otherwise>
 				</c:choose>
 				
@@ -43,10 +43,10 @@
 						<tr>
 							<td>${countTotal-i.index}</td> <!-- 글번호 -->
 							<td><a href="${pageContext.request.contextPath}/board/view/${list.no}">${list.title}</a></td> <!-- 글제목 -->
-							<td>${list.member_name}</td> <!-- 글쓴이 -->
-							<td>${list.view_cnt}</td> <!-- 조회수 -->
-							<td>${list.reg_date}</td> <!-- 등록일 -->
-							<td><a href="${pageContext.request.contextPath}/board/delete/${list.no }&${list.member_no }" class="del">삭제</a></td>
+							<td>${list.memberName}</td> <!-- 글쓴이 -->
+							<td>${list.viewCnt}</td> <!-- 조회수 -->
+							<td>${list.regDate}</td> <!-- 등록일 -->
+							<td><a href="${pageContext.request.contextPath}/board/delete/${list.no }&${list.memberNo }" class="del">삭제</a></td>
 						</tr>
 				</c:forEach>
 								

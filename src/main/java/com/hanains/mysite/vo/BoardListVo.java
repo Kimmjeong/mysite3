@@ -4,10 +4,10 @@ public class BoardListVo {
 
 	private Long no;
 	private String title;
-	private Long member_no;
-	private String member_name;
-	private Long view_cnt;
-	private String reg_date;
+	private Long memberNo;
+	private String memberName;
+	private Long viewCnt;
+	private String regDate;
 	
 	public Long getNo() {
 		return no;
@@ -21,30 +21,31 @@ public class BoardListVo {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Long getMember_no() {
-		return member_no;
+	public String getRegDate() {
+		return regDate;
 	}
-	public void setMember_no(Long member_no) {
-		this.member_no = member_no;
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
 	}
-	public String getMember_name() {
-		return member_name;
+	public Long getViewCnt() {
+		return viewCnt;
 	}
-	public void setMember_name(String member_name) {
-		this.member_name = member_name;
+	public void setViewCnt(Long viewCnt) {
+		this.viewCnt = viewCnt;
 	}
-	public Long getView_cnt() {
-		return view_cnt;
+	public Long getMemberNo() {
+		return memberNo;
 	}
-	public void setView_cnt(Long view_cnt) {
-		this.view_cnt = view_cnt;
+	public void setMemberNo(Long memberNo) {
+		this.memberNo = memberNo;
 	}
-	public String getReg_date() {
-		return reg_date;
+	public String getMemberName() {
+		return memberName;
 	}
-	public void setReg_date(String reg_date) {
-		this.reg_date = reg_date;
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
 	}
+	
 	
 	
 }

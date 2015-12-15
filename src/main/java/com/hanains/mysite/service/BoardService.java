@@ -29,12 +29,16 @@ public class BoardService {
 		return vo;
 	}
 	
-	public void delete(Long no, Long member_no){
-		boardDao.delete(no, member_no);
+	public void delete(Long no, Long memberNo){
+		boardDao.delete(no, memberNo);
 	}
 	
 	public void update(BoardVo vo){
 		boardDao.update(vo);
+	}
+	
+	public void viewCount(Long no){
+		boardDao.viewCount(no);
 	}
 	
 }

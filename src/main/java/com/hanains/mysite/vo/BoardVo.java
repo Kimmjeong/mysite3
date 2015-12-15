@@ -5,9 +5,9 @@ public class BoardVo {
 	private Long no;
 	private String title;
 	private String content;
-	private Long member_no;
-	private Long view_cnt;
-	private String reg_date;
+	private Long memberNo;
+	private Long viewCnt;
+	private String regDate;
 
 	public Long getNo() {
 		return no;
@@ -27,23 +27,24 @@ public class BoardVo {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Long getMember_no() {
-		return member_no;
+	public Long getMemberNo() {
+		return memberNo;
 	}
-	public void setMember_no(Long member_no) {
-		this.member_no = member_no;
+	public void setMemberNo(Long memberNo) {
+		this.memberNo = memberNo;
 	}
-	public Long getView_cnt() {
-		return view_cnt;
+	public String getRegDate() {
+		return regDate;
 	}
-	public void setView_cnt(Long view_cnt) {
-		this.view_cnt = view_cnt;
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
 	}
-	public String getReg_date() {
-		return reg_date;
+	public Long getViewCnt() {
+		return viewCnt;
 	}
-	public void setReg_date(String reg_date) {
-		this.reg_date = reg_date;
+	public void setViewCnt(Long viewCnt) {
+		this.viewCnt = viewCnt;
 	}
+
 
 }
