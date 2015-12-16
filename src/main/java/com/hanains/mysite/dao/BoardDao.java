@@ -53,5 +53,7 @@ public class BoardDao {
 	public void viewCount(Long no){
 		sqlSession.selectOne("board.viewCount",no);
 	}
+	
+	
 
 }
